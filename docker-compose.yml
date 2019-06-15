@@ -10,4 +10,9 @@ services:
       - TZ=Europe/London
     ports:
       - "3309:3306"
+    volumes:
+      - database:/var/lib/mysql
     restart: always
+
+volumes:
+  database:
