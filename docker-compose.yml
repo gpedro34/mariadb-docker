@@ -1,0 +1,13 @@
+version: "3"
+services:
+  mariadb:
+    build: .
+    environment:
+      - MYSQL_ROOT_PASSWORD=node-deck
+      - MYSQL_DATABASE=node-deck
+      - MYSQL_USER=node-deck
+      - MYSQL_PASSWORD=node-deck
+      - TZ=Europe/London
+    ports:
+      - "3309:3306"
+    restart: always
